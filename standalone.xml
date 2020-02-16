@@ -98,7 +98,7 @@
             <datasources>
                 <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
                     <connection-url>jdbc:postgresql://10.0.0.110:5432/esus</connection-url>
-                    <driver>h2</driver>
+                    <driver>postgres</driver>
                     <security>
                         <user-name>postgres</user-name>
                         <password>esus</password>
