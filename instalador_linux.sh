@@ -19,15 +19,15 @@ echo "Criando diretório para a aplicação."
 
  unzip -o $JBOSS_DIR/linux-jboss-7.2.0-fullinstall.zip -d $JBOSS_DIR
 
-echo "Instalando o banco de dados."
- sh $JBOSS_DIR/postgres-complete-install.sh
-echo "Preparando o banco de dados."
- bash $JBOSS_DIR/postgres-import-dump.sh
- mv $JBOSS_DIR/desinstalador* $JBOSS_DIR/../
- mv $JBOSS_DIR/backup-postgres.sh $JBOSS_DIR/../
- rm $JBOSS_DIR/postgres*
- rm $JBOSS_DIR/migrate-h2-to-postgres.sh
- rm $JBOSS_DIR/dump.backup
+#echo "Instalando o banco de dados."
+ #sh $JBOSS_DIR/postgres-complete-install.sh
+#echo "Preparando o banco de dados."
+#bash $JBOSS_DIR/postgres-import-dump.sh
+mv $JBOSS_DIR/desinstalador* $JBOSS_DIR/../
+mv $JBOSS_DIR/backup-postgres.sh $JBOSS_DIR/../
+rm $JBOSS_DIR/postgres*
+rm $JBOSS_DIR/migrate-h2-to-postgres.sh
+rm $JBOSS_DIR/dump.backup
 
 JAVA_PATH=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 
