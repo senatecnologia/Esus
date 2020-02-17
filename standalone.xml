@@ -97,11 +97,11 @@
         <subsystem xmlns="urn:jboss:domain:datasources:1.1">
             <datasources>
                 <datasource jndi-name="java:jboss/datasources/ExampleDS" pool-name="ExampleDS" enabled="true" use-java-context="true">
-                    <connection-url>jdbc:postgresql://10.0.0.110:5432/esus</connection-url>
-                    <driver>postgres</driver>
+                    <connection-url>jdbc:postgresql://HOSTNAME:5433/DBNAME</connection-url>
+                    <driver>h2</driver>
                     <security>
-                        <user-name>postgres</user-name>
-                        <password>esus</password>
+                        <user-name>DBUSERNAME</user-name>
+                        <password>DBPASSWORD</password>
                     </security>
                 </datasource>
                <drivers>
