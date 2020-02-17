@@ -27,7 +27,7 @@ mv $JBOSS_DIR/desinstalador* $JBOSS_DIR/../
 mv $JBOSS_DIR/backup-postgres.sh $JBOSS_DIR/../
 rm $JBOSS_DIR/postgres*
 rm $JBOSS_DIR/migrate-h2-to-postgres.sh
-rm $JBOSS_DIR/dump.backup
+#rm $JBOSS_DIR/dump.backup
 
 JAVA_PATH=$(readlink -f /usr/bin/javac | sed "s:bin/javac::")
 
