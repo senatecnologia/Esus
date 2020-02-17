@@ -27,7 +27,7 @@ echo "Vai esperar o serviço de Banco de Dados ser configurado ..."
 PORT=5433
 export PGPASSWORD=$DBPASSWORD
 while true; do
-docker exec -it tadeu_debian ping -c 4 8.8.8.8
+
     if docker exec -it db_postgre  psql -lqt -h $HOSTNAME -p $PORT -U $DBUSERNAME $DBNAME | cut -d \| -f 1 | grep -qw $DBNAME; then
    #if psql -lqt -h $HOSTNAME -p $PORT -U $DBUSERNAME $DBNAME | cut -d \| -f 1 | grep -qw $DBNAME; then
        
