@@ -15,4 +15,4 @@ echo "      ...executando o script SQL para CARGA DO DOMÍNIO DE DADOS..."
 
 #pg_restore -h $HOSTNAMELINK -p $PORT -U $DBUSERNAME --no-password -d $DBNAME /opt/e-SUS/jboss-as-7.2.0.Final/dump.backup
 
-docker exec -it db_postgre pg_restore -h localhost -p 5433 -U postgres --no-password -d esus /dados/opt/e-SUS/jboss-as-7.2.0.Final/dump.backup
+docker exec -it db_postgre pg_restore -h localhost -p 5432 -U postgres --no-password -d esus /dados/opt/e-SUS/jboss-as-7.2.0.Final/dump.backup
