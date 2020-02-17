@@ -3,6 +3,9 @@
 
 echo "Vai configurar o nome do HOST de banco de dados"
 HOSTNAME="192.168.0.48"
+DBNAME: "esus"
+DBUSERNAME: "postgres"
+DBPASSWORD: "esus"
 # Verifica o valor da variável de ambiente
 if [ -n "$HOSTNAMELINK" ]; then
     HOSTNAME=$HOSTNAMELINK
@@ -23,19 +26,19 @@ sed -i -r "s/DBPASSWORD/$DBPASSWORD/" /opt/e-SUS/jboss-as-7.2.0.Final/standalone
 
 
 # Aguardar a configuração do serviço de bancos para iniciar o jboss...
-echo "Vai esperar o serviço de Banco de Dados ser configurado ..."
+#echo "Vai esperar o serviço de Banco de Dados ser configurado ..."
 PORT=5433
 export PGPASSWORD=$DBPASSWORD
-while true; do
-   if psql -lqt -h $HOSTNAME -p $PORT -U $DBUSERNAME $DBNAME | cut -d \| -f 1 | grep -qw $DBNAME; then
+#while true; do
+ #  if psql -lqt -h $HOSTNAME -p $PORT -U $DBUSERNAME $DBNAME | cut -d \| -f 1 | grep -qw $DBNAME; then
        
-       echo "...Banco de Dados pronto"
-       break
-   else
-       echo "...O BD ainda não foi configurado"
-       sleep 5
-   fi
-done
+  #     echo "...Banco de Dados pronto"
+  #     break
+  # else
+    #   echo "...O BD ainda não foi configurado"
+  #     sleep 5
+  # fi
+#done
 
 
 echo "Vai iniciar o Jboss ..."
