@@ -22,7 +22,7 @@ echo "Criando diretório para a aplicação."
 #echo "Instalando o banco de dados."
  sh $JBOSS_DIR/postgres-complete-install.sh
 echo "Preparando o banco de dados."
-#bash $JBOSS_DIR/postgres-import-dump.sh
+bash $JBOSS_DIR/postgres-import-dump.sh
 mv $JBOSS_DIR/desinstalador* $JBOSS_DIR/../
 mv $JBOSS_DIR/backup-postgres.sh $JBOSS_DIR/../
 rm $JBOSS_DIR/postgres*
