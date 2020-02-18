@@ -1,0 +1,2 @@
+export PGPASSWORD=esus; /opt/e-SUS/jboss-as-7.2.0.Final/PostgreSQL/9.3/bin/createdb -E UTF8 -T template0 -p 5433 -U postgres esus
+/opt/e-SUS/jboss-as-7.2.0.Final/PostgreSQL/9.3/bin/pg_restore -p 5433 -U postgres -Fc -j 4 -d esus -O /opt/e-SUS/jboss-as-7.2.0.Final/dump.backup
